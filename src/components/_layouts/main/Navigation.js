@@ -13,6 +13,10 @@ const mainMenus = [
     name: 'About',
     route: 'about',
   },
+  {
+    name: 'Article',
+    route: 'article',
+  },
 ]
 
 const LinkItem = forwardRef(({ menu, ...props }, ref) => (

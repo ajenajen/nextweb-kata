@@ -5,7 +5,7 @@ export default function ArticleDetail({ data }) {
 
   return (
     <article>
-      <img src={data.image.featured} css={{ margin: '20px 0 10px' }} />
+      {/* <img src={data.image.featured} css={{ margin: '20px 0 10px' }} /> */}
       <h1 css={{ fontSize: '42px', color: variables.colors.link }}>
         {data.title}
       </h1>

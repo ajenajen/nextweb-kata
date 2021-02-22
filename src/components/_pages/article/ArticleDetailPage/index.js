@@ -19,19 +19,19 @@ export default function ArticleDetailPage({ articleDetail }) {
               <ArticleContent data={articleDetail} />
             </Box>
 
-            <Box width={[1, 1 / 3]} pl={[0, 20]}>
+            {/* <Box width={[1, 1 / 3]} pl={[0, 20]}>
               <Fetch service={() => ArticleService.getArticles({ limit: 5 })}>
                 {({ data }) => <PopularArticles data={data} />}
               </Fetch>
-            </Box>
+            </Box> */}
           </Flex>
         </Box>
 
-        <Box width={1}>
+        {/* <Box width={1}>
           <Fetch service={() => ArticleService.getArticles({ limit: 3 })}>
             {({ data }) => <RelatedArticles data={data} />}
           </Fetch>
-        </Box>
+        </Box> */}
       </Flex>
     </Page>
   )

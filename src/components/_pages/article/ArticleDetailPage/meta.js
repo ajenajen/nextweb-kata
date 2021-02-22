@@ -12,9 +12,9 @@ export function getMeta(data) {
       openGraph: {
         title,
         description: excerpt,
-        images: [
-          { url: image.featured || getStatic('og/og-product-default.png') },
-        ],
+        // images: [
+        //   { url: image.featured || getStatic('og/og-product-default.png') },
+        // ],
       },
       additionalMetaTags: [
         {
@@ -28,29 +28,29 @@ export function getMeta(data) {
   return meta
 }
 
-export function getSchema(data) {
-  const { id, title, excerpt, image, author, pubDate } = data
+// export function getSchema(data) {
+//   const { id, title, excerpt, image, author, pubDate } = data
 
-  const schema = {
-    main: () => (
-      <BlogJsonLd
-        url={getAsPathByRouteName('article-detail', { id })}
-        title={title}
-        description={excerpt}
-        images={[image.featured]}
-        authorName={author.name}
-        datePublished={pubDate}
-        dateModified={pubDate}
-      />
-    ),
-  }
+//   const schema = {
+//     main: () => (
+//       <BlogJsonLd
+//         url={getAsPathByRouteName('article-detail', { id })}
+//         title={title}
+//         description={excerpt}
+//         images={[image.featured]}
+//         authorName={author.name}
+//         datePublished={pubDate}
+//         dateModified={pubDate}
+//       />
+//     ),
+//   }
 
-  return schema
-}
+//   return schema
+// }
 
-export function getGTMDimensions(data) {
-  return {
-    customDM1: data.author.name,
-    customDM2: data.pubDate,
-  }
-}
+// export function getGTMDimensions(data) {
+//   return {
+//     customDM1: data.author.name,
+//     customDM2: data.pubDate,
+//   }
+// }
